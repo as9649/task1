@@ -3,8 +3,8 @@ public class Truck extends Heavy{
 
     public Truck(){}
 
-    public Truck(int car_number, int age, int wheels, String steering, double pollutants, int trailers, int max_loading_weight) {
-        super(car_number, age, wheels, steering, pollutants, trailers);
+    public Truck(int car_number, int age, int wheels, String steering, double pollutants, int seats, int trailers, int max_loading_weight) {
+        super(car_number, age, wheels, steering, pollutants, seats, trailers);
         this.max_loading_weight = max_loading_weight;
     }
 
@@ -18,9 +18,17 @@ public class Truck extends Heavy{
 
     @Override
     public String toString() {
-        System.out.println(super.toString());
         return "Truck{" +
-                "max_loading_weight=" + max_loading_weight +
+                "car_number=" + car_number +
+                ", age=" + age +
+                ", wheels=" + wheels +
+                ", steering='" + steering +
+                ", pollutants=" + pollutants +
+                ", seats=" + seats +
+                ", Trailers=" + Trailers +
+                ", max_loading_weight=" + max_loading_weight +
                 '}';
     }
+    @Override
+    public double exhaust() { return super.exhaust()*1.5; }
 }

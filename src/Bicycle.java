@@ -4,24 +4,25 @@ public class Bicycle extends Light{
     public Bicycle() {
     }
 
-    public Bicycle(int car_number, int age, int wheels, String steering, double pollutants, boolean engine, boolean basket) {
-        super(car_number, age, wheels, steering, pollutants, engine);
+    public Bicycle(int car_number, int age, int wheels, String steering, double pollutants, int seats, boolean engine, boolean basket) {
+        super(car_number, age, wheels, steering, pollutants, seats, engine);
         this.basket = basket;
     }
 
-    public void setBasket(boolean basket) {
-        this.basket = basket;
-    }
-
-    public boolean isBasket() {
-        return basket;
-    }
+    public void setBasket(boolean basket) { this.basket = basket; }
+    public boolean getBasket() { return basket; }
 
     @Override
     public String toString() {
-        System.out.println(super.toString());
         return "Bicycle{" +
-                "basket=" + basket +
+                "car_number=" + car_number +
+                ", age=" + age +
+                ", wheels=" + wheels +
+                ", steering='" + steering +
+                ", pollutants=" + pollutants +
+                ", seats=" + seats +
+                ", engine=" + engine +
+                ", basket=" + basket +
                 '}';
     }
 }
